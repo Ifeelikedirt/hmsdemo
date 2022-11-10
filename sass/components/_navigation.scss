@@ -1,0 +1,17 @@
+.header--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-items {
+    display: flex;
+    list-style: none;
+    gap: 3.2rem;
+    font-size: $fs-medium;
+    li:first-child:hover {
+      border-bottom: 2px solid $color-white;
+    }
+  }
+}
+.nav-items:link {
+  color: $color-white;
+}

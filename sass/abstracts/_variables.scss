@@ -1,0 +1,24 @@
+/*----------------------------------COLORS-----------------------------------*/
+$color-primary: #1b4965;
+$color-primary-dark: darken($color-primary, 10%);
+$color-primary-light: lighten($color-primary, 20%);
+$color-white: #fff;
+$color-dark: #222;
+$color-grey: #777;
+$color-dark-grey: #555;
+$color-light-grey: #ccc;
+
+/*----------------------------------FONT-SIZE-----------------------------------
+Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ */
+$fs-xx-small: 1rem;
+$fs-x-small: 1.2rem;
+$fs-small: 1.8em;
+$fs-medium: 2.4rem;
+$fs-large: 3rem;
+$fs-x-large: 3.6rem;
+$fs-xx-large: 8rem;
+/*Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

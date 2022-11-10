@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hospital Management</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1">
+  <link href="./css/style.css" rel="stylesheet">
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="header--nav">
+      <img src="./img/logo.png" alt="Hospital logo" class="logo">
+      <ul class="header--nav-items">
+        <li>
+          <a href="#" class="nav-items">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav-items">About Us</a>
+        </li>
+        <li>
+          <a href="#" class="nav-items">Contact Us</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-login">Log in</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="section--header grid-2-cols container">
+      <div>
+        <h1>The healing hand</h1>
+        <p>An online platform that allows you to manage all your
+        medical needs</p>
+        <div class="btn-area">
+          <a href="#" class="btn btn-start">Get started</a>
+          <a href="#" class="btn btn-login">Access</a>
+        </div>
+      </div>
+      <div>
+        <img src="./img/header-img.jpg" alt="" class="img header-img">
+      </div>
+    </section>
+  </header>
+  <main></main>
+  <footer></footer>
+</body>
+</html>

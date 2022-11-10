@@ -1,0 +1,455 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+/*----------------------------------COLORS-----------------------------------*/
+/*----------------------------------FONT-SIZE-----------------------------------
+Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ */
+/*Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  transition: all 400ms ease-in-out;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.btn {
+  padding: 1.6rem;
+  border-radius: 10px;
+  border: none;
+}
+.btn-login {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #222;
+}
+.btn-login:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: 1px solid #ccc;
+}
+.btn-start {
+  background-color: #1b4965;
+  color: #fff;
+}
+.btn-start:hover {
+  background-color: #102c3d;
+  color: #ccc;
+}
+
+.logo {
+  width: 6.2rem;
+  height: 6.2rem;
+}
+
+.header--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header--nav-items {
+  display: flex;
+  list-style: none;
+  gap: 3.2rem;
+  font-size: 2.4rem;
+}
+.header--nav-items li:first-child:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-items:link {
+  color: #fff;
+}
+
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to left bottom, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.8)), url("../../img/hospital-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 3.2rem;
+}
+
+.section--header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: left;
+}
+.section--header h1 {
+  font-size: 8rem;
+  letter-spacing: 2px;
+  margin: 4.8rem 0;
+  font-weight: 600;
+}
+.section--header p {
+  font-size: 3rem;
+  color: #ccc;
+}
+.section--header a {
+  font-size: 2.4rem;
+}
+.section--header .btn-area {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-start;
+  margin-top: 6.4rem;
+}
+
+.form-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 60%;
+  z-index: 100;
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6.4rem;
+  padding: 4.8rem;
+}
+.form-section .close-btn {
+  width: 4.8rem;
+  height: 4.8rem;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  filter: invert(33%) sepia(1%) saturate(0%) hue-rotate(205deg) brightness(94%) contrast(89%);
+  transform: translateX(-100%);
+  cursor: pointer;
+}
+.form-section .form-heading {
+  position: absolute;
+  top: 0%;
+  background-color: rgba(204, 204, 204, 0.1);
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.form-section .form-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+}
+.form-section .form-area .form-input {
+  border: none;
+  padding: 1rem;
+  width: 100%;
+}
+.form-section .form-area button {
+  font-size: 1.8em;
+  background-color: #3183b5;
+  color: #fff;
+  width: 50%;
+}
+.form-section .form-area button:hover {
+  background-color: #1b4965;
+}
+.form-section h3 {
+  font-size: 2.4rem;
+  color: #1b4965;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  position: relative;
+  padding: 12.8rem 0;
+  max-width: 100rem;
+  margin: 0.5rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+}
+.app--nav {
+  position: absolute;
+  top: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2.4rem 0;
+}
+.app--nav-form__area {
+  display: flex;
+  gap: 0.5rem;
+}
+.app--nav input {
+  width: 30%;
+  border: 1px solid #ccc;
+}
+.app--nav button {
+  padding: 0.5rem;
+}
+
+.balance {
+  grid-column: 1/span 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.balance__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.balance__value {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+/* MOVEMENTS */
+.movements {
+  grid-row: 2/span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: scroll;
+}
+
+.movements__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.movements__type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+
+.movements__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+
+.movements__type--admission {
+  background-image: linear-gradient(to top left, #1b4965, #3183b5);
+}
+
+.movements__type--removal {
+  background-image: linear-gradient(to top left, #777, #ccc);
+}
+
+.movements__value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+/* SUMMARY */
+.summary {
+  grid-row: 5/6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+
+.summary__value {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+
+.summary__value--in,
+.summary__value--interest {
+  color: #66c873;
+}
+
+.summary__value--out {
+  color: #f5465d;
+}
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* OPERATIONS */
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #ccc;
+}
+
+.operation--transfer {
+  background-image: linear-gradient(to top left, #1b4965, #3183b5);
+}
+.operation--transfer h2 {
+  color: #fff;
+}
+
+.operation--loan {
+  background-image: linear-gradient(to top left, #777, #555);
+}
+.operation--loan h2 {
+  color: #fff;
+}
+
+.operation--close {
+  background-image: linear-gradient(to top left, #102c3d, #1b4965);
+}
+.operation--close h2 {
+  color: #fff;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+/* Exceptions for interst */
+.form.form--loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+
+.form__label--loan {
+  grid-row: 2;
+}
+
+/* End exceptions */
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form__btn:focus {
+  outline: none;
+  background-color: white;
+}
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.timer {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */
